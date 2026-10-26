@@ -13,7 +13,7 @@
     <header id="page-header">
         <h1><span translate="no">Bloomrix</span> Mini Internship Website</h1>
 
-        <p>A small website that brings together the HTML I learned during my internship.</p>
+        <p>A small website that brings together the HTML I learned during first 5 days of my internship.</p>
 
         <nav id="main-navigation">
             <ul>
@@ -28,13 +28,19 @@
     </header>
 
     <hr>
-
+            <dialog id="welcome-dialog" open>
+                <p><strong>Welcome to the Bloomrix Mini Internship Website!</strong></p>
+                <p>Use the navigation at the top to visit each section.</p>
+                <form method="dialog">
+                    <button type="submit">Close</button>
+                </form>
+            </dialog>
     <main id="main-content">
 
         <section id="home" class="page-section">
             <h2>Home</h2>
 
-            <p>Welcome to my mini internship website. I am <strong>Touseef Ahmed</strong>, a Computer Science graduate doing a web development internship at <span translate="no">Bloomrix</span>. This site brings together the HTML I learned in five days of training.</p>
+            <p>Welcome to my mini internship website. I am <strong>Touseef Ahmed</strong>, a Computer Science graduate doing a web development internship at <span translate="no">Bloomrix</span>. This site brings together the HTML I learned in the first five days of my internship.</p>
 
             <figure id="banner-figure">
                 <picture>
@@ -118,12 +124,6 @@
             <table id="schedule-table">
                 <caption>Five-day HTML training schedule</caption>
 
-                <colgroup>
-                    <col>
-                    <col>
-                    <col>
-                </colgroup>
-
                 <thead>
                     <tr>
                         <th>Day</th>
@@ -175,9 +175,18 @@
                 <progress id="training-progress" value="5" max="5">5 of 5</progress>
             </p>
 
+            <h3>Audio Example</h3>
+            <audio id="sample-audio" controls preload="metadata">
+                <source src="media/audio/sample-audio.mp3" type="audio/mpeg">
+            </audio>
+
+            <h3>Video Example</h3>
+            <video id="sample-video" controls width="480" poster="images/internship-banner-small.svg" preload="metadata">
+                <source src="media/video/sample-video.mp4" type="video/mp4">
+            </video>
+
             <h3>Embedded Page</h3>
             <iframe id="cheat-sheet-frame" src="pages/html-cheat-sheet.html" title="HTML cheat sheet" width="600" height="280">
-                Your browser does not support iframes.
             </iframe>
 
             <h3>Frequently Asked Questions</h3>
@@ -225,7 +234,7 @@
                 <h3>Assignment 2: Intern Registration Form</h3>
                 <p>A registration form with a summary table.</p>
                 <p>
-                                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_intern_registration_form" target="_blank">touseef_ahmed_html_<wbr>intern_registration_form</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_intern_registration_form" target="_blank">touseef_ahmed_html_<wbr>intern_registration_form</a>
                 </p>
             </article>
 
@@ -252,10 +261,155 @@
                     <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_mini_internship_website" target="_blank">touseef_ahmed_mini_<wbr>internship_website</a>
                 </p>
             </article>
+
+        </section>
+
+        <hr>
+
+        <section id="contact" class="page-section">
+            <h2>Contact</h2>
+
+            <h3>Contact Details</h3>
+            <address>
+                <strong>Touseef Ahmed</strong><br>
+                Email: <a href="mailto:touseefahmed@gmail.com">touseefahmed@gmail.com</a><br>
+                Phone: <a href="tel:+9231X-XXXXXXX">+92 31X XXXXXXX</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/touseefahmed503" target="_blank">linkedin.com/in/touseefahmed503</a><br>
+                Rawalpindi, Pakistan
+            </address>
+
+            <h3>Contact Form</h3>
+            <p>Fields marked with * are required.</p>
+
+            <form id="contact-form" method="get">
+
+                <input type="hidden" name="form_name" value="website-contact-form">
+
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <p>
+                        <label for="full-name">Full Name *</label><br>
+                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" autocomplete="name" minlength="3" maxlength="50" pattern="[A-Za-z ]+" title="Use letters and spaces only" spellcheck="false" required>
+                    </p>
+
+                    <p>
+                        <label for="email-address">Email Address *</label><br>
+                        <input type="email" id="email-address" name="email_address" placeholder="example@gmail.com" autocomplete="email" required>
+                    </p>
+
+                    <p>
+                        <label for="phone-number">Phone Number *</label><br>
+                        <input type="tel" id="phone-number" name="phone_number" placeholder="03001234567" autocomplete="tel" maxlength="11" pattern="[0-9]{11}" title="Enter exactly 11 digits" required>
+                    </p>
+
+                    <p>
+                        <label for="website-url">Your Website</label><br>
+                        <input type="url" id="website-url" name="website_url" placeholder="https://www.example.com" autocomplete="url" size="40">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Meeting Preferences</legend>
+
+                    <p>
+                        <label for="meeting-date">Preferred Date *</label><br>
+                        <input type="date" id="meeting-date" name="meeting_date" min="2026-10-22" max="2026-12-31" required>
+                    </p>
+
+                    <p>
+                        <label for="meeting-time">Preferred Time (9:00 AM to 5:00 PM) *</label><br>
+                        <input type="time" id="meeting-time" name="meeting_time" min="09:00" max="17:00" step="1800" required>
+                    </p>
+
+                    <p>
+                        <span>Contact Me By *</span><br>
+
+                        <input type="radio" id="method-email" name="contact_method" value="email" required>
+                        <label for="method-email">Email</label>
+
+                        <input type="radio" id="method-phone" name="contact_method" value="phone">
+                        <label for="method-phone">Phone</label>
+                    </p>
+
+                    <p>
+                        <label for="message-topic">Topic *</label><br>
+                        <select id="message-topic" name="message_topic" required>
+                            <option value="" selected>-- Select a topic --</option>
+                            <optgroup label="Work">
+                                <option value="internship">Internship</option>
+                                <option value="job-opportunity">Job Opportunity</option>
+                            </optgroup>
+                            <optgroup label="Learning">
+                                <option value="html-help">HTML Help</option>
+                                <option value="project-feedback">Project Feedback</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <p>
+                        <label for="discussion-skill">Skill You Want to Discuss</label><br>
+                        <input type="text" id="discussion-skill" name="discussion_skill" list="skill-suggestions" placeholder="Start typing a skill" autocomplete="off">
+                        <datalist id="skill-suggestions">
+                            <option value="HTML">
+                            <option value="Python">
+                            <option value="C#">
+                            <option value="SQL">
+                            <option value="Docker">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <span>I Am Interested In</span><br>
+
+                        <input type="checkbox" id="interest-web" name="interests" value="web-development" checked>
+                        <label for="interest-web">Web Development</label><br>
+
+                        <input type="checkbox" id="interest-cloud" name="interests" value="cloud-and-devops">
+                        <label for="interest-cloud">Cloud and DevOps</label><br>
+
+                        <input type="checkbox" id="interest-ai" name="interests" value="artificial-intelligence">
+                        <label for="interest-ai">Artificial Intelligence</label>
+                    </p>
+
+                    <p>
+                        <label for="site-rating">Rate This Website (1 to 10)</label><br>
+                        <input type="range" id="site-rating" name="site_rating" min="1" max="10" step="1" value="5">
+                    </p>
+
+                    <p>
+                        <label for="attachment-files">Attachments (PDF, JPG or PNG)</label><br>
+                        <input type="file" id="attachment-files" name="attachment_files" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    </p>
+
+                    <p>
+                        <label for="message-text">Message *</label><br>
+                        <textarea id="message-text" name="message_text" rows="5" cols="40" placeholder="Write your message here" minlength="10" maxlength="300" spellcheck="true" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+            </form>
         </section>
 
         <hr>
     </main>
+    <footer id="page-footer">
+        <p><a href="#page-header">Back to top</a></p>
+
+        <p><small>&copy; <time datetime="2026">2026</time> Touseef Ahmed</small></p>
+
+        <noscript>
+            <p>This website uses only HTML, so it works with scripting turned off.</p>
+        </noscript>
+    </footer>
 </body>
 
 </html>

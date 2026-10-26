@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mini internship website of Touseef Ahmed with home, about, skills, training, assignments and contact sections.">
     <meta name="author" content="Touseef Ahmed">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -13,7 +14,7 @@
     <header id="page-header">
         <h1><span translate="no">Bloomrix</span> Mini Internship Website</h1>
 
-        <p>A small website that brings together the HTML I learned during first 5 days of my internship.</p>
+        <p>A small website that brings together the HTML I learned during the first 5 days of my internship.</p>
 
         <nav id="main-navigation">
             <ul>
@@ -28,6 +29,12 @@
     </header>
 
     <hr>
+
+    <main id="main-content">
+
+        <section id="home" class="page-section">
+            <h2>Home</h2>
+
             <dialog id="welcome-dialog" open>
                 <p><strong>Welcome to the Bloomrix Mini Internship Website!</strong></p>
                 <p>Use the navigation at the top to visit each section.</p>
@@ -35,21 +42,16 @@
                     <button type="submit">Close</button>
                 </form>
             </dialog>
-    <main id="main-content">
-
-        <section id="home" class="page-section">
-            <h2>Home</h2>
 
             <p>Welcome to my mini internship website. I am <strong>Touseef Ahmed</strong>, a Computer Science graduate doing a web development internship at <span translate="no">Bloomrix</span>. This site brings together the HTML I learned in the first five days of my internship.</p>
 
             <figure id="banner-figure">
                 <picture>
-                    <source media="(max-width: 600px)" type="image/svg+xml">
+                    <source media="(max-width: 600px)" srcset="images/internship-banner-small.svg" type="image/svg+xml">
                     <img src="images/internship-banner.svg" alt="Blue banner with the text Mini Internship Website and Bloomrix Internship" width="600" height="225" draggable="false">
                 </picture>
                 <figcaption>Figure 1: Banner of the mini internship website.</figcaption>
             </figure>
-        
         </section>
 
         <hr>
@@ -58,7 +60,7 @@
             <h2>About</h2>
 
             <h3>About Me</h3>
-            <p>I studied for a Bachelor of Science in Computer Science at Namal University Mianwali from <time datetime="2022">2022</time> to <time datetime="2026">2026</time>. I enjoy building full-stack web applications. </p>
+            <p>I studied for a Bachelor of Science in Computer Science at Namal University Mianwali from <time datetime="2022">2022</time> to <time datetime="2026">2026</time>. I enjoy building full-stack web applications.</p>
             <p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the language that describes the structure of a web page. <mark>This website is written with <em>HTML only</em>.</mark></p>
 
             <h3>Quotations</h3>
@@ -66,6 +68,7 @@
                 <p>The power of the Web is in its universality.</p>
                 <p>Tim Berners-Lee, <cite>W3C Web Accessibility Initiative</cite></p>
             </blockquote>
+            <p>My instructor noted: <q>Build a clean and structured webpage using semantic tags.</q></p>
 
             <h3>Language Examples</h3>
             <ul>
@@ -85,11 +88,11 @@
 
             <h3>Technical Skills</h3>
             <ul>
-                <li><b>Programming:</b> Python, C#, C++, JavaScript, TypeScript</li>
-                <li><b>Web development:</b> HTML5, CSS3, Angular 20, ASP.NET Core, FastAPI</li>
-                <li><b>Databases:</b> Microsoft SQL Server, MySQL</li>
-                <li><b>Cloud</b> Microsoft Azure, AWS</li>
-                <li><b>AI and machine learning:</b> Machine learning, prompt engineering, recommendation systems</li>
+                <li><strong>Programming:</strong> Python, C#, C++, JavaScript, TypeScript</li>
+                <li><strong>Web development:</strong> HTML5, CSS3, Angular 20, ASP.NET Core, FastAPI</li>
+                <li><strong>Databases:</strong> Microsoft SQL Server, MySQL</li>
+                <li><strong>Cloud:</strong> Microsoft Azure, AWS</li>
+                <li><strong>AI and machine learning:</strong> Machine learning, prompt engineering, recommendation systems</li>
             </ul>
 
             <h3>HTML Skill Levels</h3>
@@ -126,9 +129,9 @@
 
                 <thead>
                     <tr>
-                        <th>Day</th>
-                        <th>Topic</th>
-                        <th>Assignment</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Assignment</th>
                     </tr>
                 </thead>
 
@@ -162,7 +165,7 @@
 
                 <tfoot>
                     <tr>
-                        <th>Total</th>
+                        <th scope="row">Total</th>
                         <td>5 days</td>
                         <td>5 assignments</td>
                     </tr>
@@ -178,15 +181,19 @@
             <h3>Audio Example</h3>
             <audio id="sample-audio" controls preload="metadata">
                 <source src="media/audio/sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
             </audio>
 
             <h3>Video Example</h3>
             <video id="sample-video" controls width="480" poster="images/internship-banner-small.svg" preload="metadata">
                 <source src="media/video/sample-video.mp4" type="video/mp4">
+                <track src="media/video/sample-video-captions.vtt" kind="captions" srclang="en" label="English" default>
+                Your browser does not support the video element.
             </video>
 
             <h3>Embedded Page</h3>
             <iframe id="cheat-sheet-frame" src="pages/html-cheat-sheet.html" title="HTML cheat sheet" width="600" height="280">
+                Your browser does not support iframes.
             </iframe>
 
             <h3>Frequently Asked Questions</h3>
@@ -198,7 +205,7 @@
 
             <details>
                 <summary>Does the contact form send a message?</summary>
-                <p>No. The form has no server code, so submitting it reloads the page and shows your answers in the address bar.</p>
+                <p>No. The form has no server code, so submitting it reloads the page.</p>
             </details>
 
             <details>
@@ -226,7 +233,7 @@
                 <h3>Assignment 1: Personal Profile and Contact Page</h3>
                 <p>A profile page with a contact form.</p>
                 <p>
-                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_profile_contact_page" target="_blank">touseef_ahmed_html_<wbr>profile_contact_page</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_profile_contact_page" target="_blank" rel="noopener noreferrer">touseef_ahmed_html_<wbr>profile_contact_page</a>
                 </p>
             </article>
 
@@ -234,7 +241,7 @@
                 <h3>Assignment 2: Intern Registration Form</h3>
                 <p>A registration form with a summary table.</p>
                 <p>
-                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_intern_registration_form" target="_blank">touseef_ahmed_html_<wbr>intern_registration_form</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_intern_registration_form" target="_blank" rel="noopener noreferrer">touseef_ahmed_html_<wbr>intern_registration_form</a>
                 </p>
             </article>
 
@@ -242,7 +249,7 @@
                 <h3>Assignment 3: HTML Course Page</h3>
                 <p>A course page with media and page sections.</p>
                 <p>
-                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_course_page" target="_blank">touseef_ahmed_html_<wbr>course_page</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_course_page" target="_blank" rel="noopener noreferrer">touseef_ahmed_html_<wbr>course_page</a>
                 </p>
             </article>
 
@@ -250,7 +257,7 @@
                 <h3>Assignment 4: Intern Application Portal</h3>
                 <p>An application form with validation and status information.</p>
                 <p>
-                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_application_portal" target="_blank">touseef_ahmed_html_<wbr>application_portal</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_html_application_portal" target="_blank" rel="noopener noreferrer">touseef_ahmed_html_<wbr>application_portal</a>
                 </p>
             </article>
 
@@ -258,9 +265,20 @@
                 <h3>Assignment 5: Mini Internship Website</h3>
                 <p>This website.</p>
                 <p>
-                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_mini_internship_website" target="_blank">touseef_ahmed_mini_<wbr>internship_website</a>
+                    <a href="https://github.com/TouseefAhmedexe/touseef_ahmed_mini_internship_website" target="_blank" rel="noopener noreferrer">touseef_ahmed_mini_<wbr>internship_website</a>
                 </p>
             </article>
+
+            <h3>Code Examples</h3>
+            <p>Here is how a standard section and form element structure is written across my assignments:</p>
+            <pre><code>&lt;section id="example-section"&gt;
+    &lt;h2&gt;Example Section&lt;/h2&gt;
+    &lt;form action="#" method="post"&gt;
+        &lt;label for="user-name"&gt;User Name *&lt;/label&gt;
+        &lt;input type="text" id="user-name" name="user_name" required&gt;
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/section&gt;</code></pre>
 
         </section>
 
@@ -272,16 +290,16 @@
             <h3>Contact Details</h3>
             <address>
                 <strong>Touseef Ahmed</strong><br>
-                Email: <a href="mailto:touseefahmed@gmail.com">touseefahmed@gmail.com</a><br>
-                Phone: <a href="tel:+9231X-XXXXXXX">+92 31X XXXXXXX</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/touseefahmed503" target="_blank">linkedin.com/in/touseefahmed503</a><br>
+                Email: <a href="mailto:touseefahmed9119@gmail.com">touseefahmed9119@gmail.com</a><br>
+                Phone: <a href="tel:+923125691991">+92 312 5691991</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/touseefahmed503" target="_blank" rel="noopener noreferrer">linkedin.com/in/touseefahmed503</a><br>
                 Rawalpindi, Pakistan
             </address>
 
             <h3>Contact Form</h3>
             <p>Fields marked with * are required.</p>
 
-            <form id="contact-form" method="get">
+            <form id="contact-form" action="#" method="post" enctype="multipart/form-data">
 
                 <input type="hidden" name="form_name" value="website-contact-form">
 
@@ -290,7 +308,7 @@
 
                     <p>
                         <label for="full-name">Full Name *</label><br>
-                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" autocomplete="name" minlength="3" maxlength="50" pattern="[A-Za-z ]+" title="Use letters and spaces only" spellcheck="false" required>
+                        <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" autocomplete="name" minlength="3" maxlength="50" pattern="[A-Za-z '-]+" title="Use letters, spaces, hyphens, and apostrophes" spellcheck="false" required>
                     </p>
 
                     <p>
@@ -314,7 +332,7 @@
 
                     <p>
                         <label for="meeting-date">Preferred Date *</label><br>
-                        <input type="date" id="meeting-date" name="meeting_date" min="2026-10-22" max="2026-12-31" required>
+                        <input type="date" id="meeting-date" name="meeting_date" min="2026-10-27" max="2026-12-31" required>
                     </p>
 
                     <p>
@@ -322,15 +340,15 @@
                         <input type="time" id="meeting-time" name="meeting_time" min="09:00" max="17:00" step="1800" required>
                     </p>
 
-                    <p>
-                        <span>Contact Me By *</span><br>
+                    <fieldset>
+                        <legend>Contact Me By *</legend>
 
                         <input type="radio" id="method-email" name="contact_method" value="email" required>
                         <label for="method-email">Email</label>
 
                         <input type="radio" id="method-phone" name="contact_method" value="phone">
                         <label for="method-phone">Phone</label>
-                    </p>
+                    </fieldset>
 
                     <p>
                         <label for="message-topic">Topic *</label><br>
@@ -363,8 +381,8 @@
                         </datalist>
                     </p>
 
-                    <p>
-                        <span>I Am Interested In</span><br>
+                    <fieldset>
+                        <legend>I Am Interested In</legend>
 
                         <input type="checkbox" id="interest-web" name="interests" value="web-development" checked>
                         <label for="interest-web">Web Development</label><br>
@@ -374,7 +392,7 @@
 
                         <input type="checkbox" id="interest-ai" name="interests" value="artificial-intelligence">
                         <label for="interest-ai">Artificial Intelligence</label>
-                    </p>
+                    </fieldset>
 
                     <p>
                         <label for="site-rating">Rate This Website (1 to 10)</label><br>
@@ -401,13 +419,14 @@
 
         <hr>
     </main>
+
     <footer id="page-footer">
         <p><a href="#page-header">Back to top</a></p>
 
-        <p><small>&copy; <time datetime="2026">2026</time> Touseef Ahmed </small></p>
+        <p><small>&copy; <time datetime="2026">2026</time> Touseef Ahmed</small></p>
 
         <noscript>
-            <p>This website uses only HTML, so it works with scripting turned-off.</p>
+            <p>This website uses only HTML, so it works with scripting turned off.</p>
         </noscript>
     </footer>
 </body>

@@ -12,10 +12,13 @@ Task 5 of my Bloomrix internship.
 - Contact
 
 ## Files
-- index.html - the website
+- index.html - the main website
 - images/ - banner images and favicon
-- media/ - sample audio, video
-- pages/html-cheat-sheet.html - page shown in the iframe
+- media/ - sample audio, video, and caption tracks
+- pages/html-cheat-sheet.html - embedded iframe page
 
-## How to run
-Open index.html with Live Server in Visual Studio Code, or in any web browser.
+## Testing Verification
+Tested in Google Chrome and Mozilla Firefox:
+- Navigation anchor links scroll correctly to corresponding section IDs.
+- Form constraint validation (email, tel pattern, required fields) triggers browser messages correctly on submission.
+- Media elements playback correctly with working fallback controls and text tracks.
